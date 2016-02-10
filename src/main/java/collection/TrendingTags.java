@@ -1,13 +1,10 @@
 /**
- *   File Name: TrendingTags.java<br>
- *
- *   Nepton, Jean-francois<br>
- *   Java Boot Camp Exercise<br>
- *   Instructor: Jean-francois Nepton<br>
- *   Created: Aug 1, 2015
- *   
+ * File Name: TrendingTags.java<br>
+ * Nepton, Jean-francois<br>
+ * Java Boot Camp Exercise<br>
+ * Instructor: Jean-francois Nepton<br>
+ * Created: Aug 1, 2015
  */
-
 package collection;
 
 /**
@@ -23,15 +20,23 @@ package collection;
  * removals from within the middle of the collection.
  * <p>
  * There are methods to add, remove, and display collection
- * 
+ *
  * @author LastName, FirstName
  * @version 1.0.0
- * @since 1.0
- *
+ * @since 1.0 LinkedList
  */
 public class TrendingTags {
 
-	String[] words = { "Money", "SQA", "Solutions", "Java", "Learn", "Collections" };
+	/**
+	 * A static method to display a TrendingTags's elements
+	 *
+	 * @param tags
+	 *            TrendingTags instance to work with
+	 */
+	public static void displayElements(TrendingTags tags) {
+		// Provide logic to view elements in collection for TrendingTags
+		// instance
+	}
 
 	/**
 	 * Here is a basic test or application logic that should be performed on the
@@ -49,25 +54,7 @@ public class TrendingTags {
 		displayElements(tags);
 	}
 
-	/**
-	 * A static method to display a TrendingTags's elements
-	 * 
-	 * @param tags
-	 *            TrendingTags instance to work with
-	 */
-	public static void displayElements(TrendingTags tags) {
-		// Provide logic to view elements in collection for TrendingTags
-		// instance
-
-	}
-
-	/**
-	 * An instance method to display elements
-	 */
-	private void displayElements() {
-		// Provide logic to view elements for instance
-
-	}
+	String[] words = { "Money", "SQA", "Solutions", "Java", "Learn", "Collections" };
 
 	/**
 	 * Default Constructor
@@ -91,4 +78,10 @@ public class TrendingTags {
 		// provide logic to remove an element
 	}
 
+	/**
+	 * An instance method to display elements
+	 */
+	private void displayElements() {
+		// Provide logic to view elements for instance
+	}
 }

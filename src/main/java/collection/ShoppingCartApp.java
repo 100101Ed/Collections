@@ -1,13 +1,10 @@
 /**
- *   File Name: ShoppingCartApp.java<br>
- *
- *   Nepton, Jean-francois<br>
- *   Java Boot Camp Exercise<br>
- *   Instructor: Jean-francois Nepton<br>
- *   Created: Aug 1, 2015
- *   
+ * File Name: ShoppingCartApp.java<br>
+ * Nepton, Jean-francois<br>
+ * Java Boot Camp Exercise<br>
+ * Instructor: Jean-francois Nepton<br>
+ * Created: Aug 1, 2015
  */
-
 package collection;
 
 /**
@@ -24,15 +21,23 @@ package collection;
  * items to the end of the collection.
  * <p>
  * There are methods to add, remove, and display collection
- * 
+ *
  * @author LastName, FirstName
  * @version 1.0.0
- * @since 1.0
- *
+ * @since 1.0 LinkedList
  */
 public class ShoppingCartApp {
 
-	String[] items = { "LAPTOP0217", "LAMPO3982", "CANDY3984", "JAVA9083", "SQASOL9845", "VACAT9845" };
+	/**
+	 * A static method to display a elements
+	 *
+	 * @param cart
+	 *            ShoppingCart instance to work with
+	 */
+	public static void displayElements(ShoppingCartApp cart) {
+		// Provide logic to view elements in collection for TrendingTags
+		// instance
+	}
 
 	/**
 	 * Here is a basic test or application logic that should be performed on the
@@ -50,25 +55,7 @@ public class ShoppingCartApp {
 		displayElements(cart);
 	}
 
-	/**
-	 * A static method to display a elements
-	 * 
-	 * @param cart
-	 *            ShoppingCart instance to work with
-	 */
-	public static void displayElements(ShoppingCartApp cart) {
-		// Provide logic to view elements in collection for TrendingTags
-		// instance
-
-	}
-
-	/**
-	 * An instance method to display all elements
-	 */
-	private void displayElements() {
-		// Provide logic to view elements for instance
-
-	}
+	String[] items = { "LAPTOP0217", "LAMPO3982", "CANDY3984", "JAVA9083", "SQASOL9845", "VACAT9845" };
 
 	/**
 	 * Default constructor
@@ -92,4 +79,10 @@ public class ShoppingCartApp {
 		// provide logic to remove an element
 	}
 
+	/**
+	 * An instance method to display all elements
+	 */
+	private void displayElements() {
+		// Provide logic to view elements for instance
+	}
 }

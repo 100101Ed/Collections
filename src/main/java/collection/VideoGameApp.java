@@ -1,13 +1,10 @@
 /**
- *   File Name: VideoGameApp.java<br>
- *
- *   Nepton, Jean-francois<br>
- *   Java Boot Camp Exercise<br>
- *   Instructor: Jean-francois Nepton<br>
- *   Created: Aug 1, 2015
- *   
+ * File Name: VideoGameApp.java<br>
+ * Nepton, Jean-francois<br>
+ * Java Boot Camp Exercise<br>
+ * Instructor: Jean-francois Nepton<br>
+ * Created: Aug 1, 2015
  */
-
 package collection;
 
 import java.util.Map;
@@ -25,15 +22,26 @@ import java.util.TreeMap;
  * very quickly.
  * <p>
  * There are methods you should implement to add, remove, and display collection
- * 
+ *
  * @author LastName, FirstName
  * @version 1.0.0
- * @since 1.0
- *
+ * @since 1.0 HashSet
  */
 public class VideoGameApp {
 
-	private Map<Integer, Long> enemies;
+	/**
+	 * A static method to display a StockSimulation's elements
+	 *
+	 * @param vidGame
+	 *            VideoGameApp instance to work with
+	 */
+	public static void displayElements(VideoGameApp vidGame) {
+		// Provide logic to view elements in collection for StockSimilation
+		// instance
+		System.out.println("\n\n/****************** ENEMIES **********************/");
+		vidGame.displayElements();
+		System.out.println("/-------------------------------------------------/");
+	}
 
 	/**
 	 * Here is a basic test or application logic that should be performed on the
@@ -51,31 +59,7 @@ public class VideoGameApp {
 		displayElements(vidGame);
 	}
 
-	/**
-	 * A static method to display a StockSimulation's elements
-	 * 
-	 * @param vidGame
-	 *            VideoGameApp instance to work with
-	 */
-	public static void displayElements(VideoGameApp vidGame) {
-		// Provide logic to view elements in collection for StockSimilation
-		// instance
-		System.out.println("\n\n/****************** ENEMIES **********************/");
-		vidGame.displayElements();
-		System.out.println("/-------------------------------------------------/");
-	}
-
-	/**
-	 * An instance method to display a elements
-	 */
-	private void displayElements() {
-		// Provide logic to view elements for instance
-
-		for (Integer i : enemies.keySet()) {
-			System.out.println("The enemy with an id " + i + " has " + enemies.get(i) + " experience points.");
-		}
-
-	}
+	private Map<Integer, Long> enemies;
 
 	/**
 	 * Default Constructor
@@ -83,26 +67,22 @@ public class VideoGameApp {
 	public VideoGameApp() {
 		// Either overload this class or make this default default constructor
 		// interactive.
-		enemies = new TreeMap<Integer, Long>();
-
+		this.enemies = new TreeMap<Integer, Long>();
 		// enemies.put(10, 346572L);
 		// enemies.put(58, 23864234L);
 		// enemies.put(19, 546546L);
 		// enemies.put(48, 123L);
 		// enemies.put(8, (long) 785764);
 		// enemies.put(95, Long.valueOf(126764));
-
 		// Create a variable to hold ids in an array for enemies
 		int[] ids = new int[] { 10, 58, 19, 48, 8, 95 };
 		// Create a variable to hold expPoints in an array for enemies'
 		// experience points
 		long[] expPoints = new long[] { 346572L, 23864234L, 546546L, 123L, 785764L, 126764L };
-
 		// Add a group of elements - ids and expPoints
 		addElements(ids, expPoints);
 		// Add an individual element
 		addElement(34, 32875L);
-
 	}
 
 	/**
@@ -110,7 +90,7 @@ public class VideoGameApp {
 	 */
 	public void addElement(int id, long expPoints) {
 		// provide logic to add an element
-		enemies.put(id, expPoints);
+		this.enemies.put(id, expPoints);
 	}
 
 	/**
@@ -119,9 +99,8 @@ public class VideoGameApp {
 	public void addElements(int[] ids, long[] expPoints) {
 		// provide logic to add an element
 		for (int i = 0; i < ids.length; i++) {
-			enemies.put(ids[i], expPoints[i]);
+			this.enemies.put(ids[i], expPoints[i]);
 		}
-
 	}
 
 	/**
@@ -130,8 +109,17 @@ public class VideoGameApp {
 	public void removeElement(int... values) {
 		// provide logic to remove an element
 		for (int i : values) {
-			enemies.remove(i);
+			this.enemies.remove(i);
 		}
 	}
 
+	/**
+	 * An instance method to display a elements
+	 */
+	private void displayElements() {
+		// Provide logic to view elements for instance
+		for (Integer i : this.enemies.keySet()) {
+			System.out.println("The enemy with an id " + i + " has " + this.enemies.get(i) + " experience points.");
+		}
+	}
 }

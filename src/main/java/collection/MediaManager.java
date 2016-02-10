@@ -1,14 +1,13 @@
 /**
- *   File Name: MediaManager.java<br>
- *
- *   Nepton, Jean-francois<br>
- *   Java Boot Camp Exercise<br>
- *   Instructor: Jean-francois Nepton<br>
- *   Created: Aug 1, 2015
- *   
+ * File Name: MediaManager.java<br>
+ * Nepton, Jean-francois<br>
+ * Java Boot Camp Exercise<br>
+ * Instructor: Jean-francois Nepton<br>
+ * Created: Aug 1, 2015
  */
-
 package collection;
+
+import java.util.TreeSet;
 
 /**
  * MediaManager A Media Manger Software. This software collects media for a
@@ -22,15 +21,28 @@ package collection;
  * be kept in natural order based on the name of the media.
  * <p>
  * There are methods to add, remove, and display collection
- * 
+ *
  * @author LastName, FirstName
  * @version 1.0.0
- * @since 1.0
- *
+ * @since 1.0 TreeSet
  */
 public class MediaManager {
 
-	String[] media = { "LAPTOP0217", "LAMPO3982", "CANDY3984", "JAVA9083", "SQASOL9845", "VACAT9845" };
+	/**
+	 * A static method to display a elements
+	 *
+	 * @param mediaManager
+	 *            MediaManager instance to work with
+	 */
+	public static void displayElements(MediaManager mediaManager) {
+		// TODO Provide logic to view elements in collection for TrendingTags
+		// instance
+		System.out.println("Provide logic to view elements in collection for TrendingTags instance");
+		// for (String string : mediaManager.media) {
+		// if (string.length() > mediaManager.media[0].length){ }
+		// }
+		// mediaManager.displayElements();
+	}
 
 	/**
 	 * Here is a basic test or application logic that should be performed on the
@@ -48,46 +60,40 @@ public class MediaManager {
 		displayElements(mediaManager);
 	}
 
-	/**
-	 * A static method to display a elements
-	 * 
-	 * @param mediaManager
-	 *            MediaManager instance to work with
-	 */
-	public static void displayElements(MediaManager mediaManager) {
-		// Provide logic to view elements in collection for TrendingTags
-		// instance
-
-	}
-
-	/**
-	 * An instance method to display all elements
-	 */
-	private void displayElements() {
-		// Provide logic to view elements for instance
-
-	}
+	TreeSet<String> media = new TreeSet<String>();
 
 	/**
 	 * Default constructor
 	 */
 	public MediaManager() {
-		// Either overload this class or make this default default constructor
-		// interactive.
+		addElement("LAPTOP0217", "LAMPO3982", "CANDY3984", "JAVA9083", "SQASOL9845", "VACAT9845");
 	}
 
 	/**
 	 * Method to add an element
 	 */
 	public void addElement(String... val) {
-		// provide logic to add an element
+		for (String string : val) {
+			this.media.add(string);
+		}
 	}
 
 	/**
 	 * Method to remove an element
 	 */
 	public void removeElement(String... val) {
-		// provide logic to remove an element
+		for (String string : val) {
+			this.media.remove(string);
+		}
 	}
 
+	/**
+	 * An instance method to display all elements
+	 */
+	private void displayElements() {
+		System.out.println("This are the total media you have: " + this.media.size());
+		for (String string : this.media) {
+			System.out.println(string);
+		}
+	}
 }

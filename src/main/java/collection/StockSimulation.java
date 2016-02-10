@@ -1,13 +1,10 @@
 /**
- *   File Name: StockSimulation.java<br>
- *
- *   Nepton, Jean-francois<br>
- *   Java Boot Camp Exercise<br>
- *   Instructor: Jean-francois Nepton<br>
- *   Created: Aug 1, 2015
- *   
+ * File Name: StockSimulation.java<br>
+ * Nepton, Jean-francois<br>
+ * Java Boot Camp Exercise<br>
+ * Instructor: Jean-francois Nepton<br>
+ * Created: Aug 1, 2015
  */
-
 package collection;
 
 /**
@@ -23,16 +20,23 @@ package collection;
  * security name.
  * <p>
  * There are methods you should implement to add, remove, and display collection
- * 
+ *
  * @author LastName, FirstName
  * @version 1.0.0
- * @since 1.0
- *
+ * @since 1.0 TreeSet
  */
 public class StockSimulation {
 
-	String[] securityNames = { "Gold", "Silver", "Iron", "Lead", "Copper", "Iron" };
-	double[] securityValues = { 89.6, 48.39, 24.9, 12.1, 4.0, 24.9 };
+	/**
+	 * A static method to display a StockSimulation's elements
+	 *
+	 * @param sim
+	 *            StockSimulation instance to work with
+	 */
+	public static void displayElements(StockSimulation sim) {
+		// Provide logic to view elements in collection for StockSimilation
+		// instance
+	}
 
 	/**
 	 * Here is a basic test or application logic that should be performed on the
@@ -50,25 +54,9 @@ public class StockSimulation {
 		displayElements(sim);
 	}
 
-	/**
-	 * A static method to display a StockSimulation's elements
-	 * 
-	 * @param sim
-	 *            StockSimulation instance to work with
-	 */
-	public static void displayElements(StockSimulation sim) {
-		// Provide logic to view elements in collection for StockSimilation
-		// instance
+	String[] securityNames = { "Gold", "Silver", "Iron", "Lead", "Copper", "Iron" };
 
-	}
-
-	/**
-	 * An instance method to display a elements
-	 */
-	private void displayElements() {
-		// Provide logic to view elements for instance
-
-	}
+	double[] securityValues = { 89.6, 48.39, 24.9, 12.1, 4.0, 24.9 };
 
 	/**
 	 * Default Constructor
@@ -92,4 +80,10 @@ public class StockSimulation {
 		// provide logic to remove an element
 	}
 
+	/**
+	 * An instance method to display a elements
+	 */
+	private void displayElements() {
+		// Provide logic to view elements for instance
+	}
 }

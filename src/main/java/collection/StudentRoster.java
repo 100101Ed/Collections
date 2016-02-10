@@ -1,13 +1,10 @@
 /**
- *   File Name: StudentRoster.java<br>
- *
- *   Nepton, Jean-francois<br>
- *   Java Boot Camp Exercise<br>
- *   Instructor: Jean-francois Nepton<br>
- *   Created: Aug 1, 2015
- *   
+ * File Name: StudentRoster.java<br>
+ * Nepton, Jean-francois<br>
+ * Java Boot Camp Exercise<br>
+ * Instructor: Jean-francois Nepton<br>
+ * Created: Aug 1, 2015
  */
-
 package collection;
 
 /**
@@ -23,15 +20,23 @@ package collection;
  * importance is fast access to the elements in the collection.
  * <p>
  * There are methods to add, remove, and display collection
- * 
+ *
  * @author LastName, FirstName
  * @version 1.0.0
- * @since 1.0
- *
+ * @since 1.0 HashSet
  */
 public class StudentRoster {
 
-	String[] students = { "JOHND9824", "KIML2794", "LUISM3262", "JENP8319", "JEFFN1092", "DIANER9216" };
+	/**
+	 * A static method to display a elements
+	 *
+	 * @param sr
+	 *            StudentRoaster instance to work with
+	 */
+	public static void displayElements(StudentRoster sr) {
+		// Provide logic to view elements in collection for TrendingTags
+		// instance
+	}
 
 	/**
 	 * Here is a basic test or application logic that should be performed on the
@@ -49,25 +54,7 @@ public class StudentRoster {
 		displayElements(sr);
 	}
 
-	/**
-	 * A static method to display a elements
-	 * 
-	 * @param sr
-	 *            StudentRoaster instance to work with
-	 */
-	public static void displayElements(StudentRoster sr) {
-		// Provide logic to view elements in collection for TrendingTags
-		// instance
-
-	}
-
-	/**
-	 * An instance method to display all elements
-	 */
-	private void displayElements() {
-		// Provide logic to view elements for instance
-
-	}
+	String[] students = { "JOHND9824", "KIML2794", "LUISM3262", "JENP8319", "JEFFN1092", "DIANER9216" };
 
 	/**
 	 * Default constructor
@@ -91,4 +78,10 @@ public class StudentRoster {
 		// provide logic to remove an element
 	}
 
+	/**
+	 * An instance method to display all elements
+	 */
+	private void displayElements() {
+		// Provide logic to view elements for instance
+	}
 }
